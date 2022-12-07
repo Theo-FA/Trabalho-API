@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    height: 10vh;
+    background-color: blue;
+}
+
+main{
+    display: flex;
+    background-color: aqua;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    margin: 5vh;
+    width: 75vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    background-color: black;
+}
+#capa{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    background-color: black;
+}
+
+#input{
+    width: 75vw;
+    height: 5vh;
+}
