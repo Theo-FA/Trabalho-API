@@ -15,16 +15,22 @@
         </nav>    
     </header>
 
-    <main>
-        <div>
+    <main class="container-fluid">
+        <div id="form">
             <form>
-                <input type="text" class="input">
-                <input type="button" class="submit">
+                <input type="text" id="input">
+                <br>
+                <input type="button" id="submit">
             </form>
         </div>
+        <div id="capa">
 
+        </div>
+        <div id="info">
+
+        </div>
         <script>
-            document.querySelector(".submit").addEventListener("click", busca);
+            document.querySelector("#submit").addEventListener("click", busca);
             async function busca(){
                 let trecho = document.querySelector(".input").value;
                 const options = {
@@ -40,6 +46,10 @@
                 .then(response => console.log(response))
                 .catch(err => console.error(err));
                 console.log(resposta);
+
+                let info = resposta.tracks.hits[0].track.title;
+                info = info + " - " + resposta.tracks.hits[0].track.subtitle;
+                document.querySelector("#info").innerHTML = info;
             };
         </script>
     </main>
