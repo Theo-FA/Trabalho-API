@@ -47,8 +47,8 @@
 	            
                 console.log(resposta)
 
-                let info = resposta.tracks.hits[0].track.title;
-                info = info + " - " + resposta.tracks.hits[0].track.subtitle;
+                
+                info = info + " - " + response.tracks.hits[0].track.subtitle;
                 document.querySelector("#info").innerHTML = info;
             };
         </script>
