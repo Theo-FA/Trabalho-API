@@ -41,11 +41,11 @@
                     }
                 };
 
-                let resposta = await fetch('https://shazam.p.rapidapi.com/search?term=' + trecho +'&locale=en-US&offset=0&limit=5', options)
-                .then(response => response.json())
-                .then(response => console.log(response))
-                .catch(err => console.error(err));
-                console.log(resposta);
+                let resposta = await fetch('https://shazam.p.rapidapi.com/search?term='+trecho+'&locale=en-US&offset=0&limit=5', options)
+	            .then(response => response.json())
+	            .then(response => console.log(response))
+	            .catch(err => console.error(err));
+                console.log(resposta)
 
                 let info = resposta.tracks.hits[0].track.title;
                 info = info + " - " + resposta.tracks.hits[0].track.subtitle;
