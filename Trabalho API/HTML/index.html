@@ -24,13 +24,14 @@
             </form>
         </div>
         <div id="capa">
-
+            <img id="img">
         </div>
         <div id="info">
 
         </div>
         <script>
             document.querySelector("#submit").addEventListener("click", busca);
+
             async function busca(){
                 let trecho = document.querySelector("#input").value;
                 const options = {
@@ -41,15 +42,24 @@
                     }
                 };
 
-                let resposta =  fetch('https://shazam.p.rapidapi.com/search?term='+trecho+'&locale=en-US&offset=0&limit=5', options)
-	            .then(response => response.json())
-	            .then(response => console.log(response))
-	            
-                console.log(resposta)
+                let resposta = await fetch('https://shazam.p.rapidapi.com/search?term=' + trecho +'&offset=0&limit=5', options)
+                .then(response => response.json())
+                .catch(err => console.error(err));
+                console.log(resposta);
 
-                
-                info = info + " - " + response.tracks.hits[0].track.subtitle;
+                let info = resposta.tracks.hits[0].track.title;
+                info = info + " - " + resposta.tracks.hits[0].track.subtitle;
                 document.querySelector("#info").innerHTML = info;
+
+                let imagemData = await fetch(resposta.tracks.hits[0].track.images.background);
+                let imagem = await imagemData.blob();
+                const imageObjectURL = URL.createObjectURL(imagem);
+                let img = document.createElement("img");
+                img.setAttribute("id", "img");
+                img.setAttribute("alt", "foto bonita des musiques");
+                img.src = imageObjectURL;
+                capa.appendChild(img);
+
             };
         </script>
     </main>
