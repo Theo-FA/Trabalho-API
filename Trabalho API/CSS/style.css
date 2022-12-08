@@ -29,9 +29,7 @@ form{
 }
 #capa{
     display: flex;
-    max-height: 80vh;
     margin: 5px;
-    justify-content: center;
 }
 
 #input{
@@ -42,7 +40,7 @@ form{
 
 #img{
     position: relative;
-    height: 500px;
+    height: 30vh;
 }
 
 #img-header{
