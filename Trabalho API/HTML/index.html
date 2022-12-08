@@ -57,6 +57,7 @@
                 const imageObjectURL = URL.createObjectURL(imagem);
                 let img = document.createElement("img");
                 img.setAttribute("id", "img");
+                img.setAttribute("class", "img-responsive");
                 img.setAttribute("alt", "foto bonita dos músicos");
                 img.src = imageObjectURL;
                 capa.appendChild(img);
