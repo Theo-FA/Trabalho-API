@@ -1,12 +1,12 @@
 header{
     display: flex;
     height: 10vh;
-    background-color: blue;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
     display: flex;
-    background-color: aqua;
     height: 90vh;
     flex-direction: column;
     align-items: center;
@@ -14,8 +14,8 @@ main{
 
 form{
     display: flex;
-    margin: 5vh;
     width: 75vw;
+    margin: 10px;
     flex-direction: column;
     align-items: center;
 }
@@ -23,20 +23,30 @@ form{
 #info{
     display: flex;
     height: fit-content;
-    width: 75vw;
-    margin: 5px;
-    background-color: black;
+    width: 50vw;
+    color: black;
+    font-size: 40px;
 }
 #capa{
     display: flex;
     height: fit-content;
-    width: 75vw;
+    width: fit-content;
     margin: 5px;
-    background-color: black;
+    justify-content: center;
 }
 
 #input{
     display: flex;
-    width: 75vw;
+    width: 50vw;
     height: 5vh;
+}
+
+#img{
+    width: 50vw;
+}
+
+#img-header{
+    height: 8vh;
+    width: 8vh;
+    margin-right: 10px;
 }
