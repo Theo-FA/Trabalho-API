@@ -29,8 +29,7 @@ form{
 }
 #capa{
     display: flex;
-    height: fit-content;
-    width: fit-content;
+    max-height: 80vh;
     margin: 5px;
     justify-content: center;
 }
