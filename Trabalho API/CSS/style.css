@@ -7,6 +7,7 @@ header{
 
 main{
     display: flex;
+    height: 90vh;
     flex-direction: column;
     align-items: center;
 }
@@ -42,7 +43,7 @@ form{
 
 #img{
     position: relative;
-    height: 50vh;
+    height: 500px;
 }
 
 #img-header{
