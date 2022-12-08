@@ -42,7 +42,8 @@ form{
 }
 
 #img{
-    width: 50vw;
+    position: relative;
+    height: 50vh;
 }
 
 #img-header{
