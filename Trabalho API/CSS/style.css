@@ -26,6 +26,7 @@ form{
     width: 50vw;
     color: black;
     font-size: large;
+    text-align: center;
 }
 #capa{
     display: flex;
@@ -41,6 +42,7 @@ form{
 #img{
     position: relative;
     height: 30vh;
+    border: 5px black solid;
 }
 
 #img-header{
